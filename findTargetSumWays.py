@@ -46,11 +46,11 @@ class Solution:
             return 0
 
         target = (S+sum(nums))//2
-        print(target)
+        # print(target)
         # target is sum(positive)
 
         dp_list = [0 for _ in range(target+1)]
-        print(dp_list)
+        # print(dp_list)
         dp_list[0] = 1
         for each in nums:
             for i in range(target, each-1, -1):
