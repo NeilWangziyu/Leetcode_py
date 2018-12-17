@@ -4,15 +4,15 @@ class Solution:
         :type nums: List[int]
         :rtype: List[List[int]]
         """
-
-        def dfs(depth, start, value_list):
+        def bfs(depth, start, value_list):
             res.append(value_list)
             if depth == len(nums):
                 return
             for i in range(start, len(nums)):
-                dfs(depth+1, i+1, value_list+[nums[i]])
+                bfs(depth+1, i+1, value_list+[nums[i]])
+
         res = []
-        dfs(0, 0, [])
+        bfs(0, 0, [])
         return res
 
 
