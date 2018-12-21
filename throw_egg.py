@@ -18,13 +18,33 @@ def superEggDrop(K, N):
                 broken = state[egg-1][drop-1]
                 unbroken = state[egg][floor-drop]
                 condtion = max(broken, unbroken) + 1
+                # condition:破和不破两种可能性，再加上这一次用掉的丢弃机会
                 result = min(result, condtion)
+                # 每一个drop从1到 floor，总有一个最小解，就是floor楼层的最优
             state[egg][floor] = result
     print(state)
 
     return state[K][N]
 
+def superEggDrop2(K, N):
+    """
+        :type K: int
+        :type N: int
+        :rtype: int
+        """
+    DP = [0 for i in range(K+1)]
+    # DP[i]=n表示i个鸡蛋，经过move次移动，最多检测n层楼
+    move = 0
+    while(DP[K]<N):
+        for i in range(K, 0, -1):
+            # print(i)
+            DP[i] += DP[i-1] + 1
 
-K = 4
-N = 2000
+        move += 1
+    return move
+
+
+K = 2
+N = 100
 print(superEggDrop(K, N))
+print(superEggDrop2(K, N))
