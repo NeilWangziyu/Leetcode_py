@@ -36,3 +36,7 @@ class Solution:
 s = Solution()
 print(s.buddyStrings("abc", "acb"))
 print(s.buddyStrings("ab", "ab"))
+
+print("A")
+print(ord("A"))
+print(bin(ord("A")))
