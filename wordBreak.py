@@ -106,6 +106,7 @@ class Solution:
                 for string in self.backtrack(s[:i], hashmap):
                     temp.append(string + ' ' + s[i:])
         return temp
+
     def wordBreak4(self, s, wordDict):
         """
         :type s: str
