@@ -25,8 +25,31 @@ class Solution:
         print(dp)
         return dp[365]
 
+    def mincostTickets2(self, days, costs):
+        """
+        :type days: List[int]
+        :type costs: List[int]
+        :rtype: int
+        """
+        dp = [0] * 366
+        days = set(days)
+        for i in range(366):
+            if i in days:
 
+                dp[i] += dp[i - 1] + costs[0]
 
+                if i > 7:
+                    dp[i] = min(dp[i], dp[i - 7] + costs[1])
+                else:
+                    dp[i] = min(dp[i], costs[1])
+                if i > 30:
+                    dp[i] = min(dp[i], dp[i - 30] + costs[2])
+                else:
+                    dp[i] = min(dp[i], costs[2])
+            else:
+                dp[i] = dp[i - 1]
+
+        return dp[-1]
 
 
 days = [1,2,3,4,5,6,7,8,9,10,30,31]
