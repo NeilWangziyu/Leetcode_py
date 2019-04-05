@@ -21,5 +21,42 @@ class Solution:
         right=self.lowestCommonAncestor(root.right,p,q)
         if left and right :
             return root
-        return right if not left else left
+        if not left:
+            return right
+        else:
+            return left
 
+    def findPath(self, root, p, path):
+        if root.val == p.val:
+            return True
+        if root.left:
+            path.append(root.left)
+            if self.findPath(root.left, p, path):
+                return True
+            else:
+                path.pop()
+        if root.right:
+            path.append(root.right)
+            if self.findPath(root.right, p, path):
+                return True
+            else:
+                path.pop()
+        return False
+    def lowestCommonAncestor2(self, root, p, q):
+        """
+        :type root: TreeNode
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: TreeNode
+        # 类似于多叉树的方法，返回，寻找list
+        """
+        path_p, path_q = [root], [root]
+        self.findPath(root, p, path_p)
+        self.findPath(root, q, path_q)
+        n_min = min(len(path_p), len(path_q))
+        for i in range(n_min):
+            if path_p[i].val == path_q[i].val:
+                ans = path_p[i]
+        return ans
+
+    # 如果是二叉树，则可以比较root.val和两个值
