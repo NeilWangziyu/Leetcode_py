@@ -14,6 +14,8 @@ class Solution:
         node.val = node.next.val
         node.next = node.next.next
 
+
+
     def deleteNode2(self, node):
         """
         :type node: ListNode
