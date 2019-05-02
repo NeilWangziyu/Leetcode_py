@@ -1,3 +1,5 @@
+# https://leetcode-cn.com/problems/regular-expression-matching/
+# 正则表达式匹配
 class Solution:
     def isMatch(self, s, p):
         """
@@ -62,7 +64,6 @@ class Solution:
         """
         note-----------------------
         '.'匹配任意字符，'*'只能匹配任意多个前面的字符
-
         do-------------------------
         use 2 pointers
         Created on Fri Nov 17 2018
@@ -78,6 +79,80 @@ class Solution:
             return self.isMatch(s[1:], p[1:])
         return False
 
+
+
+# -----------------
+# https://leetcode-cn.com/problems/regular-expression-matching/
+# 实际上这道题比较粗暴，没有正则那题好
+class Solution2:
+    def isMatch(self, s, p):
+        i, j = 0, 0  # 下个要匹配s,p的索引
+        star = -1  # p中星号的最后的一个索引
+        while i < len(s):
+            if j >= len(p) or (p[j] not in {"*", "?"} and s[i] != p[j]):
+                if star == -1:  # 没有星号 无法扩展
+                    return False
+                j = star + 1  # 有星号,于是模式p移动一位
+                star_i += 1  # 使用星号匹配一位字符串,i移动一位
+                i = star_i
+            elif p[j] == "*":  # 记录下星号的索引,暂时不用,j移动一位
+                star = j
+                star_i = i  # star_i 是s中和*号匹配的第一个字符串的索引
+                j += 1
+            else:
+                i += 1
+                j += 1
+        while j < len(p):  # 匹配完成后,p中还有剩余,检查是否有除了星号
+            if p[j] != "*":
+                return False
+            j += 1
+        return True
+
+
+    def isMatch2(self, s, p):
+        i, j = 0, 0
+        star = -1
+        while(i < len(s)):
+            if j >= len(p) or (p[j] not in {"*", "?"} and s[i] != p[j]):
+                if star == -1:
+                    return False
+                j = star + 1
+                star_i += 1
+                i = star_i
+            elif p[j] == "*":
+                star = j
+                star_i = i
+                j += 1
+            else:
+                i += 1
+                j += 1
+        while(j < len(p)):
+            if p[j] != '*':
+                return False
+            j += 1
+        return True
+
+    def isMatch3(self, s, p) -> bool:
+        s_len = len(s)
+        p_len = len(p)
+        i, j, star, i_index = 0, 0, -1, 0
+        while i < s_len:
+            if j < p_len and (p[j] == s[i] or p[j] == '?'):
+                i += 1
+                j += 1
+            elif j < p_len and p[j] == '*':
+                star = j
+                i_index = i
+                j += 1
+            elif star != -1:
+                j = star + 1
+                i_index += 1
+                i = i_index
+            else:
+                return False
+        while j < p_len and p[j] == '*':
+            j += 1
+        return j == p_len
 
 if __name__ == "__main__":
 
