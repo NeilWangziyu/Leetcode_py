@@ -5,7 +5,7 @@ class Interval:
         self.end = e
 
 class Solution:
-    def merge(self, intervals: List[Interval]) -> List[Interval]:
+    def merge(self, intervals):
         if not intervals:
             return []
         if len(intervals) == 1:
@@ -26,7 +26,7 @@ class Solution:
 
         return result
 
-    def merge2(self, intervals: List[Interval]) -> List[Interval]:
+    def merge2(self, intervals):
 
         if not intervals:
             return []
@@ -60,3 +60,22 @@ intervals = [[2,3],[4,5],[6,7],[8,9],[1,10]]
 s = Solution()
 print(s.merge(intervals))
 
+
+class Solution2:
+    def merge(self, intervals):
+        """
+        改题目了
+        :param intervals: List[List[int]]
+        :return: List[List[int]]
+        """
+        res = []
+        for i in sorted(intervals, key=lambda x:x[0]):
+            if res and i[0] <= res[-1][1]:
+                res[-1][1] = max(i[1], res[-1][1])
+            else:
+                res.append(i)
+        return res
+
+intervals = [[2,3],[4,5],[6,7],[8,9],[1,10]]
+s = Solution2()
+print(s.merge(intervals))
