@@ -4,19 +4,18 @@ class Solution:
         :type nums: List[int]
         :rtype: List[List[int]]
         针对没有重复点
+        实际上是DFS，不是BFS
         """
         res = []
         def bfs(depth, start, res_list):
             print(res_list)
-            # 广度优先搜索
+            # 深度优先搜索
             res.append(res_list)
             if depth == len(nums):
                 return
             else:
                 for i in range(start, len(nums)):
                     bfs(depth+1, i+1, res_list+[nums[i]])
-
-
         bfs(0, 0, [])
         return res
 
