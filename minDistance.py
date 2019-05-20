@@ -34,6 +34,7 @@ class Solution:
         for i in range(1, len1+1):
             for j in range(1, len2+1):
                 if word1[i-1] == word2[j-1]:
+                    # 相等，直接替换
                     dp[i][j] = dp[i-1][j-1]
                 else:
                     dp[i][j] = 1 + min(dp[i-1][j-1], min(dp[i-1][j], dp[i][j-1]))
@@ -99,6 +100,31 @@ class Solution:
             return distance
 
         return getDistance(len(word1), len(word2))
+
+    def minDistance4(self, word1, word2):
+        """
+        :type word1: str
+        :type word2: str
+        :rtype: int
+        """
+        m, n = len(word1) + 1, len(word2) + 1
+
+        cur = [0] * n
+        for i in range(n):
+            cur[i] = i
+
+        for i in range(1, m):
+            temp = cur[0]
+            cur[0] = i
+            for j in range(1, n):
+                pre = temp
+                temp = cur[j]
+
+                if word1[i - 1] == word2[j - 1]:
+                    cur[j] = pre
+                else:
+                    cur[j] = min(pre, temp, cur[j - 1]) + 1
+        return cur[-1]
 
 
 word1 = "horse"
