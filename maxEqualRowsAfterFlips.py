@@ -24,32 +24,65 @@ class Solution:
 
         return res
 
-    def maxEqualRowsAfterFlips(self, matrix) -> int:
-        if not matrix:
-            return 0
-        if len(matrix) == 1:
-            return 1
+    def maxEqualRowsAfterFlips(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: int
+        """
+        s1 = set()
+        for i in range(len(matrix)):
+            s1.add(i)
+        alll = [s1]
+        for j in range(1, len(matrix[0])):
+            flip = set()
+            remain = set()
+            for i in range(len(matrix)):
+                if matrix[i][j] != matrix[i][0]:
+                    flip.add(i)
+                else:
+                    remain.add(i)
+            now = []
+            for a in alll:
+                s = a.intersection(remain)
+                if len(s) > 1:
+                    now.append(s)
+                s = a.intersection(flip)
+                if len(s) > 1:
+                    now.append(s)
+            alll = now
+        ans = 1
+        for a in alll:
+            ans = max(ans, len(a))
+        return ans
 
-        new_matrix = [int("".join(map(str, each)),2) for each in matrix]
-        res = 1
-        res_old = 1
-        count_hash = {}
-        for i in range(len(new_matrix)):
 
-            if new_matrix[i] not in count_hash:
-                count_hash[new_matrix[i]] = 1
-            else:
-                count_hash[new_matrix[i]] += 1
-        # print(count_hash)
-        count_hash_keys = list(count_hash.keys())
-        for i in range(len(count_hash_keys)):
-            for j in range(i+1, len(count_hash_keys)):
-                # print(count_hash_keys[i] ^ count_hash_keys[j])
-                xor_num = count_hash_keys[i] ^ count_hash_keys[j]
-                if set(bin(xor_num)[2:]) == 1 and xor_num!= 1:
-                    res = max(res, res_old + count_hash[count_hash_keys[i]]*count_hash[count_hash_keys[j]])
 
-        return res
+    # def maxEqualRowsAfterFlips(self, matrix) -> int:
+    #     if not matrix:
+    #         return 0
+    #     if len(matrix) == 1:
+    #         return 1
+    #
+    #     new_matrix = [int("".join(map(str, each)),2) for each in matrix]
+    #     res = 1
+    #     res_old = 1
+    #     count_hash = {}
+    #     for i in range(len(new_matrix)):
+    #
+    #         if new_matrix[i] not in count_hash:
+    #             count_hash[new_matrix[i]] = 1
+    #         else:
+    #             count_hash[new_matrix[i]] += 1
+    #     # print(count_hash)
+    #     count_hash_keys = list(count_hash.keys())
+    #     for i in range(len(count_hash_keys)):
+    #         for j in range(i+1, len(count_hash_keys)):
+    #             # print(count_hash_keys[i] ^ count_hash_keys[j])
+    #             xor_num = count_hash_keys[i] ^ count_hash_keys[j]
+    #             if set(bin(xor_num)[2:]) == 1 and xor_num!= 1:
+    #                 res = max(res, res_old + count_hash[count_hash_keys[i]]*count_hash[count_hash_keys[j]])
+    #
+    #     return res
 
 
 
