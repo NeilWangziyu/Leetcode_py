@@ -4,6 +4,7 @@ class ListNode():
         self.val = val
 
 class Solution:
+    # JZoffer 59
     def maxSlidingWindow(self, nums, k: int):
         if not nums or len(nums)<k or k<0:
             return []

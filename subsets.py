@@ -1,4 +1,7 @@
 class Solution:
+    """
+    所有的子集和排列
+    """
     def subsets(self, nums):
         """
         :type nums: List[int]

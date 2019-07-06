@@ -4,6 +4,7 @@ class Solution:
         :type nums: List[int]
         :rtype: List[List[int]]
         针对没有重复点
+        不好，不需要depth和start
         实际上是DFS，不是BFS
         """
         res = []
@@ -19,8 +20,25 @@ class Solution:
         bfs(0, 0, [])
         return res
 
+    def subsets(self, nums):
+        if not nums:
+            return []
+        res = []
+
+        def DFS(depth, tem):
+            res.append(tem)
+            if depth >= len(nums):
+                return
+            for i in range(depth, len(nums)):
+                DFS(i + 1, tem + [nums[i]])
+
+        DFS(0, [])
+        return res
+
+
     def subset2(self, nums):
 #         有重复点
+#          不好，
         nums.sort()
         res = []
         def bfs(depth, start, res_list):

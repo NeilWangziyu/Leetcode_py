@@ -114,6 +114,85 @@ class TopVotedCandidate2(object):
             return l
 
 
+
+class TopVotedCandidate3:
+
+    def __init__(self, persons, times):
+        """
+        :type persons: List[int]
+        :type times: List[int]
+        """
+        sorted_persons = persons[:]
+        sorted_times = times[:]
+
+        if not persons or not times:
+            self.vailid = False
+        else:
+            self.vailid = True
+        tmp = list(range(len(times)))
+        tmp = sorted(tmp, key=lambda i:times[i])
+        for i in tmp:
+            sorted_persons[i]=persons[i]
+            sorted_times[i]=times[i]
+        self.times = sorted_times
+        persons_number = max(persons)
+        score_table = [0]*(persons_number+1)
+        self.winner = [0]*len(times)
+        max_til_now = 0
+        now_winner = 0
+        for i in range(len(times)):
+            score_table[sorted_persons[i]]+=1
+            if score_table[sorted_persons[i]]>max_til_now:
+                max_til_now=score_table[sorted_persons[i]]
+                now_winner = sorted_persons[i]
+            elif score_table[sorted_persons[i]]==max_til_now:
+                now_winner = sorted_persons[i]
+            self.winner[i] = now_winner
+
+    def q(self, t):
+        """
+        :type t: int
+        :rtype: int
+        """
+        if not self.vailid:
+            return -1
+        if t>=self.times[-1]:
+            return self.winner[-1]
+        if t<=self.times[0]:
+            return self.winner[0]
+
+        l = 0
+        r = len(self.times)
+        while(l<r):
+            mid = (l+r)//2
+            if self.times[mid]<=t:
+                l=mid+1
+            else:
+                r=mid
+        return self.winner[l-1]
+
+
+
+class TopVotedCandidate4:
+
+    def __init__(self, persons: List[int], times: List[int]):
+        self.times = times
+        n = len(persons)
+        nums = [0]*(n+1)
+        self.top = [0]*n
+        tmp = 0
+        for i in range(n):
+            nums[persons[i]] += 1
+            if nums[persons[i]]>=nums[tmp]:
+                tmp = persons[i]
+            self.top[i] = tmp
+
+    def q(self, t: int) -> int:
+        idx = bisect.bisect_right(self.times, t)
+        return self.top[idx-1]
+
+
+
 def binquery(time_list, t):
     if not time_list:
         return 0, 0

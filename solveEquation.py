@@ -17,7 +17,6 @@ class Solution:
 
         for i in range(len(equation)):
             if equation[i] == '=':
-
                 if not stack:
                     left = False
                     plus = False
@@ -32,8 +31,6 @@ class Solution:
                     plus = False
                     stack = []
                     continue
-
-
 
 
             if left == True:

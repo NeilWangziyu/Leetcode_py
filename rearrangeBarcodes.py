@@ -1,3 +1,5 @@
+import heapq
+from collections import Counter
 class Solution:
     def rearrangeBarcodes(self, barcodes):
         """
@@ -35,6 +37,29 @@ class Solution:
             else:
                 keys[j],keys[j+1]=keys[j+1],keys[j]
         return res
+
+    def rearrangeBarcodes2(self, barcodes):
+        """
+        :type barcodes: List[int]
+        :rtype: List[int]
+        """
+        pq = []
+        cnts = Counter(barcodes)
+        for key, val in cnts.items():
+            heapq.heappush(pq, (-val, key))
+        result = []
+        while pq:
+            _, num = heapq.heappop(pq)
+            cnts[num] -= 1
+            if not result:
+                result.append(num)
+            else:
+                last = result[-1]
+                result.append(num)
+                if cnts[last]:
+                    heapq.heappush(pq, (-cnts[last], last))
+        return result
+
 
 
 s = Solution()
