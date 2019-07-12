@@ -21,6 +21,20 @@ class Solution:
                 res[index-1] += each[2]
         return res
 
+    def corpFlightBookings2(self, bookings, n: int):
+        # O(n)解法
+        res = [0 for _ in range(1, n+1)]
+        for each in bookings:
+            res[each[0]-1] += each[2]
+            if each[1] < n:
+                res[each[1]] -= each[2]
+
+        for i in range(1, n):
+            res[i] += res[i-1]
+        return res
+
+
+
 
 if __name__ == "__main__":
     bookings = [[1, 2, 10], [2, 3, 20], [2, 5, 25]]
@@ -28,3 +42,4 @@ if __name__ == "__main__":
     s = Solution()
     print(s.corpFlightBookings0(bookings, n))
     print(s.corpFlightBookings(bookings, n))
+    print(s.corpFlightBookings2(bookings, n))
