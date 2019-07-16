@@ -40,9 +40,10 @@ class Solution:
 
                 p = -s
 
-                print(p, i)
+                print(s, p, i)
 
                 if p < len(deepest_index) and i - deepest_index[p] >ret:
+                    # 说明这段时间内，是高于0的
                     ret = i - deepest_index[p]
 
                 if s < 0 and (len(deepest)==0 or deepest[-1]> s):
