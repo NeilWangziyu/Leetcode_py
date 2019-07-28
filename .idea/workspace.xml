@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9c1290d-fe07-4566-b0f7-56115d4fb511" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/isArmstrong.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/largestUniqueNumber.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minimumCost.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minimumSemesters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minimumCost.py" beforeDir="false" afterPath="$PROJECT_DIR$/minimumCost.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +16,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/intersect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
+            <state relative-caret-position="315">
               <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
             </state>
           </provider>
@@ -37,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/minimumCost.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+            <state relative-caret-position="488">
+              <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
             </state>
           </provider>
         </entry>
@@ -46,7 +43,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minimumSemesters.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
+            <state relative-caret-position="1350">
               <caret line="90" selection-start-line="90" selection-end-line="90" />
             </state>
           </provider>
@@ -95,8 +92,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="272" />
-    <option name="y" value="27" />
+    <option name="x" value="45" />
+    <option name="y" value="7" />
     <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
@@ -108,6 +105,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,7 +117,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -142,7 +139,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.minimumCost">
+  <component name="RunManager" selected="Python.minimumSemesters">
     <configuration name="intersect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Leetcode_py" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -255,8 +252,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.minimumCost" />
         <item itemvalue="Python.minimumSemesters" />
+        <item itemvalue="Python.minimumCost" />
         <item itemvalue="Python.isArmstrong" />
         <item itemvalue="Python.largestUniqueNumber" />
         <item itemvalue="Python.intersect" />
@@ -289,7 +286,8 @@
       <workItem from="1563972596351" duration="3261000" />
       <workItem from="1564148033287" duration="1949000" />
       <workItem from="1564216587101" duration="2060000" />
-      <workItem from="1564238136160" duration="4539000" />
+      <workItem from="1564238136160" duration="4732000" />
+      <workItem from="1564277968715" duration="9000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1562467148187</created>
@@ -312,22 +310,29 @@
       <option name="project" value="LOCAL" />
       <updated>1564228295350</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="competition">
+      <created>1564242791691</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1564242791691</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29691000" />
+    <option name="totallyTimeSpent" value="29893000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="89" y="25" width="1920" height="1080" extended-state="0" />
+    <frame x="272" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15228967" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15388711" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2672065" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2672065" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39975247" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -336,7 +341,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32920793" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32920793" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32894737" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -352,7 +357,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="7.23" />
     <MESSAGE value="没怎么搞清楚其实哈哈哈" />
-    <option name="LAST_COMMIT_MESSAGE" value="没怎么搞清楚其实哈哈哈" />
+    <MESSAGE value="competition" />
+    <option name="LAST_COMMIT_MESSAGE" value="competition" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Leetcode_py$MagicDictionary.coverage" NAME="MagicDictionary Coverage Results" MODIFIED="1563630356020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -366,7 +372,7 @@
     <SUITE FILE_PATH="coverage/Leetcode_py$smallestSufficientTeam.coverage" NAME="smallestSufficientTeam Coverage Results" MODIFIED="1563074611010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Leetcode_py$TimeMap.coverage" NAME="TimeMap Coverage Results" MODIFIED="1562386946255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Leetcode_py$largestUniqueNumber.coverage" NAME="largestUniqueNumber Coverage Results" MODIFIED="1564238680664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Leetcode_py$minimumSemesters.coverage" NAME="minimumSemesters Coverage Results" MODIFIED="1564242351847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Leetcode_py$minimumSemesters.coverage" NAME="minimumSemesters Coverage Results" MODIFIED="1564278055223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Leetcode_py$leastInterval.coverage" NAME="leastInterval Coverage Results" MODIFIED="1563973718082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Leetcode_py$openLock.coverage" NAME="openLock Coverage Results" MODIFIED="1564148743221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Leetcode_py$shortestAlternatingPaths.coverage" NAME="shortestAlternatingPaths Coverage Results" MODIFIED="1563702074507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -538,7 +544,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/intersect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
+        <state relative-caret-position="315">
           <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
         </state>
       </provider>
@@ -552,15 +558,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/minimumSemesters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
+        <state relative-caret-position="1350">
           <caret line="90" selection-start-line="90" selection-end-line="90" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/minimumCost.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        <state relative-caret-position="488">
+          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
         </state>
       </provider>
     </entry>

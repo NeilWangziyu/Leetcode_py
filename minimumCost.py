@@ -105,6 +105,7 @@ class Solution:
             return -1
         else:
             return res
+    # -----------------------
 
     def minimumCost2(self, N: int, conections: List[List[int]]) -> int:
 
@@ -114,6 +115,29 @@ class Solution:
         return G.PrimMST_weight()
 
 
+    # -----------------------
+    def minimumCost3(self, N: int, conections: List[List[int]]) -> int:
+        def find(i):
+            if father[i] == i:
+                return i
+            else:
+                father[i] = find(father[i])
+                return father[i]
+
+        conn = sorted(conections, key=lambda item: item[2])
+        visited = []
+        res = 0
+        father = [i for i in range(N + 1)]
+        for item in conn:
+            i, j = item[0], item[1]
+            cost = item[2]
+            fi, fj = find(i), find(j)
+            if fi == fj:
+                continue
+            res += cost
+            father[fi] = fj
+            visited.append((i, j))
+        return res if len(visited) == N - 1 else -1
 
 
 s = Solution()
