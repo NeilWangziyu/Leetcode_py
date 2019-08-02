@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9c1290d-fe07-4566-b0f7-56115d4fb511" name="Default Changelist" comment="" />
+    <list default="true" id="f9c1290d-fe07-4566-b0f7-56115d4fb511" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/camelMatch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nextPermutation.py" beforeDir="false" afterPath="$PROJECT_DIR$/nextPermutation.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,20 +35,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minimumCost.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+            <state relative-caret-position="1725">
+              <caret line="115" selection-start-line="115" selection-end-line="115" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/minimumSemesters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="443">
+              <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/minimumSemesters.py">
+        <entry file="file://$PROJECT_DIR$/camelMatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="101" column="24" lean-forward="true" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="535">
+              <caret line="52" column="37" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -88,14 +101,14 @@
         <option value="$PROJECT_DIR$/isArmstrong.py" />
         <option value="$PROJECT_DIR$/minimumCost.py" />
         <option value="$PROJECT_DIR$/minimumSemesters.py" />
+        <option value="$PROJECT_DIR$/nextPermutation.py" />
+        <option value="$PROJECT_DIR$/camelMatch.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="45" />
-    <option name="y" value="7" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -105,7 +118,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -117,6 +129,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -139,8 +152,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.minimumSemesters">
-    <configuration name="intersect" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.camelMatch">
+    <configuration name="camelMatch" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Leetcode_py" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -153,7 +166,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/intersect.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/camelMatch.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -252,11 +265,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.camelMatch" />
         <item itemvalue="Python.minimumSemesters" />
         <item itemvalue="Python.minimumCost" />
         <item itemvalue="Python.isArmstrong" />
         <item itemvalue="Python.largestUniqueNumber" />
-        <item itemvalue="Python.intersect" />
       </list>
     </recent_temporary>
   </component>
@@ -288,6 +301,7 @@
       <workItem from="1564216587101" duration="2060000" />
       <workItem from="1564238136160" duration="4732000" />
       <workItem from="1564277968715" duration="99000" />
+      <workItem from="1564756632973" duration="1954000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1562467148187</created>
@@ -328,18 +342,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29983000" />
+    <option name="totallyTimeSpent" value="31937000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="45" y="7" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15388711" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20886981" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2672065" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25903615" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39975247" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -387,6 +401,7 @@
     <SUITE FILE_PATH="coverage/Leetcode_py$accountsMerge.coverage" NAME="accountsMerge Coverage Results" MODIFIED="1562384869389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Leetcode_py$intersect.coverage" NAME="intersect Coverage Results" MODIFIED="1564227802651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Leetcode_py$validUtf8.coverage" NAME="validUtf8 Coverage Results" MODIFIED="1562386919985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Leetcode_py$camelMatch.coverage" NAME="camelMatch Coverage Results" MODIFIED="1564759321396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/accountsMerge.py">
@@ -565,18 +580,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/minimumCost.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+        <state relative-caret-position="1725">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nextPermutation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/minimumSemesters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="101" column="24" lean-forward="true" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
+        <state relative-caret-position="443">
+          <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camelMatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="52" column="37" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
         </state>
       </provider>
     </entry>
