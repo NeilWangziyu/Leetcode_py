@@ -1,10 +1,12 @@
 # Definition for a binary tree node.
+# https://leetcode-cn.com/problems/smallest-subtree-with-all-the-deepest-nodes/
+# https://leetcode-cn.com/problems/lowest-common-ancestor-of-deepest-leaves/submissions/
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
-
 
 class Solution:
     def lcaDeepestLeaves(self, root: TreeNode) -> TreeNode:
